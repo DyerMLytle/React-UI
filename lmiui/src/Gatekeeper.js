@@ -25,9 +25,7 @@ class GateKeeper extends Component {
     // change code below this line
     const char = 15;
     if (this.state.input.length > char) {
-      divStyle = { backgroundImage:`url(${im2})`, height: `100%` }
-    } else {
-      divStyle;
+      divStyle = { backgroundImage: `url(${im2})`, height: `100%` }
     }
     // change code above this line
     return (

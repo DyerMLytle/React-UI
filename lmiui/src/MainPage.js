@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
-import Products from "./Products";
 import GateKeeper from "./Gatekeeper";
+import CanvasControls from "./CanvasControls";
 import { Container, Row, Col } from 'react-bootstrap';
 
 class MainPage extends Component {
-  constructor() {
-    super();
-  }
 
   render() {
     return (
-      <Container fluid>
+      <Container >
         <Row className="show-grid">
-          <Col>
-            <Products />
+          <Col lg={2}>
+            <CanvasControls />
           </Col>
-          <Col>
+          <Col >
             <GateKeeper />
+          </Col>
+          <Col lg={2}>
+            hello, hello
           </Col>
         </Row>
       </Container>
