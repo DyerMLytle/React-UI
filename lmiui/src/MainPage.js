@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import GateKeeper from "./Gatekeeper";
 import CanvasControls from "./CanvasControls";
 import { Navbar, Container, Row, Col } from 'react-bootstrap';
 import logo from "./assets/images/lowelllogo_horizontal_black_web.png";
