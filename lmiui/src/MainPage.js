@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CanvasControls from "./CanvasControls";
-import { Navbar, Container, Row, Col } from 'react-bootstrap';
+import { Nav, NavDropdown, Navbar, Container, Row, Col } from 'react-bootstrap';
 import logo from "./assets/images/lowelllogo_horizontal_black_web.png";
 
 class MainPage extends Component {
@@ -20,10 +20,21 @@ class MainPage extends Component {
             />
           </Navbar.Brand>
           <Navbar.Toggle />
+
+
           <Navbar.Collapse className="justify-content-end">
-            <Navbar.Text>
-              Signed in as: <a href="#login">Dyer Lytle</a>
-            </Navbar.Text>
+            <Nav className="me-auto">
+              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="#link">Link</Nav.Link>
+              <NavDropdown title="Instrument" id="basic-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">LMI</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">Deveny</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">NIHTS</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action/3.4">JOEControl</NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+            <Navbar.Text>LDT I-Control</Navbar.Text>
           </Navbar.Collapse>
         </Navbar>
         <Container >

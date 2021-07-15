@@ -8,23 +8,22 @@ class CanvasControls extends Component {
     this.childRef = React.createRef();
   }
 
-  clickDraw = () => {
-    this.ctx.drawImage(this.image, 0, 0);
+  componentDidMount() {
+    this.updateCanvas();
   }
 
-  componentDidMount() {
-    this.ctx = this.childRef.current.canvasRef.current.getContext('2d');
-    this.image = new Image();
-    this.image.src = im1;
+  updateCanvas() {
+    const ctx = this.childRef.current.canvasRef.current.getContext('2d');
+    var image1 = new Image();
+    image1.src = im1;
+    image1.onload = function () {
+      ctx.drawImage(image1, 0, 0);
+    }
   }
 
   render() {
-    const divStyle = {
-      height: "100%"
-    };
     return (
-      <div style={divStyle}>
-        <button onClick={this.clickDraw}> Draw </button>
+      <div>
         <Canvas ref={this.childRef} />
       </div>
     );
