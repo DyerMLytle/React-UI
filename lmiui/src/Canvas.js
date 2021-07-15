@@ -10,8 +10,9 @@ class Canvas extends Component {
     return (
       <div>
         <canvas
-          width={500}
-          height={500}
+          //width={1000}
+          //height={1000}
+          rdata-paper-resize="true"
           ref={this.canvasRef} >
         </canvas>
       </div>

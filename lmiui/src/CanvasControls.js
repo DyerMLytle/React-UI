@@ -19,8 +19,11 @@ class CanvasControls extends Component {
   }
 
   render() {
+    const divStyle = {
+      height: "100%"
+    };
     return (
-      <div>
+      <div style={divStyle}>
         <button onClick={this.clickDraw}> Draw </button>
         <Canvas ref={this.childRef} />
       </div>
