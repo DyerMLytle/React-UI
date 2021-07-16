@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 class App extends Component {
   render() {
     return(
-      <div>
+      <div style={{ background: "rgb(254, 179, 71)" }}>
         <MainPage />
       </div>
     );

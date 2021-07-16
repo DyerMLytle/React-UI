@@ -23,7 +23,6 @@ class CanvasControls extends Component {
       var hRatio = width / image1.width;
       var vRatio = height / image1.height;
       var ratio = Math.min(hRatio, vRatio);
-      //ctx.drawImage(image1, 0, 0);
       ctx.drawImage(image1, 0, 0, image1.width, image1.height,
       0, 0, image1.width * ratio, image1.height * ratio);
     }

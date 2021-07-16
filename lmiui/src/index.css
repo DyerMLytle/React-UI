@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-top: 66px;
+  background-color: orange;
 }
 
 code {
@@ -20,10 +22,8 @@ body > #root > div {
 canvas {
   width: 100%;
   height: 100%;
-  border: solid 1px red;
+  /* border: dotted 1px red; */
 }
-
-body { padding-top: 70px; }
 
 #root {
   width: 100vw;
@@ -31,4 +31,8 @@ body { padding-top: 70px; }
 
 .color-nav {
   background-color: rgb(141, 171, 255);
+}
+
+.top-buffer {
+  margin-top:20px;
 }
