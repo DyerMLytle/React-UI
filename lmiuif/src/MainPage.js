@@ -9,6 +9,9 @@ import {
   Navbar,
   Container,
   Row,
+  Modal,
+  Popover,
+  OverlayTrigger,
   Col
 } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -16,8 +19,40 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from "./assets/images/lowelllogo_horizontal_black_web.png";
 
 function MainPage() {
+  const [show, setShow] = React.useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const popover = (
+    <Popover id="popover-basic">
+      <Popover.Title as="h3">Popover right</Popover.Title>
+      <Popover.Content>
+        <Button variant="primary" size="sm">Button 1</Button>
+        <Button variant="primary" size="sm">Button 2</Button>
+        And here's some <strong>amazing</strong> content. It's very engaging.
+        right?
+      </Popover.Content>
+    </Popover>
+  );
+
   return (
+
     <Container fluid style={{ width: "98%", height: "100%" }}>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Focus the Telescope</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Use the buttons and inputs to focus.</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Focus now
+          </Button>
+        </Modal.Footer>
+      </Modal>
       <Navbar className="color-nav" fixed="top" expand="lg">
         <Navbar.Brand href="#home">
           <img
@@ -49,10 +84,12 @@ function MainPage() {
         <Col lg={2} style={{ paddingLeft: 0, paddingRight: 0 }}>
           <div style={{ width: "100%", height: "100%" }}>
             <div className="btn-group">
-              <Button variant="primary" size="sm" >
+              <Button variant="primary" size="sm" onClick={handleShow} >
                 Focus
               </Button>
-              <Button variant="primary" size="sm">Button 2</Button>
+              <OverlayTrigger trigger="click" placement="right" overlay={popover}>
+                <Button variant="primary" size="sm">Button 2</Button>
+              </OverlayTrigger>
             </div>
             <InputGroup size="sm" className="mb-3">
               <InputGroup.Text id="inputGroup-sizing-sm">Small</InputGroup.Text>
