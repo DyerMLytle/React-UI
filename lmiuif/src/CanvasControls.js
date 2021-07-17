@@ -4,19 +4,17 @@ import im1 from "./assets/images/dumbbell-bw.jpg";
 
 function CanvasControls() {
 
-  var cRef = React.useRef(null);
   var childRef = React.useRef(null);
 
   React.useEffect(() => {
-    cRef = childRef.current;
     updateCanvas();
   }, [])
 
   const updateCanvas = () => {
-    const ctx = cRef.getContext('2d');
+    const ctx = childRef.current.getContext('2d');
     ctx.imageSmoothingEnabled = false;
-    const width = cRef.width;
-    const height = cRef.height;
+    const width = childRef.current.width;
+    const height = childRef.current.height;
     var image1 = new Image();
     image1.src = im1;
     image1.onload = function () {

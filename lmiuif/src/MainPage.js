@@ -9,10 +9,11 @@ import {
   Navbar,
   Container,
   Row,
-  Modal,
+  Offcanvas,
   Popover,
   OverlayTrigger,
-  Col
+  Col,
+  PopoverBody
 } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -25,34 +26,34 @@ function MainPage() {
   const handleShow = () => setShow(true);
 
   const popover = (
-    <Popover id="popover-basic">
-      <Popover.Title as="h3">Popover right</Popover.Title>
-      <Popover.Content>
+
+    < Popover id="popover-basic" >
+      {/* <PopoverTitle as="h3">Popover right</PopoverTitle> */}
+      <PopoverBody>
         <Button variant="primary" size="sm">Button 1</Button>
         <Button variant="primary" size="sm">Button 2</Button>
         And here's some <strong>amazing</strong> content. It's very engaging.
         right?
-      </Popover.Content>
-    </Popover>
-  );
+      </PopoverBody>
+    </Popover >)
 
   return (
 
     <Container fluid style={{ width: "98%", height: "100%" }}>
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Focus the Telescope</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Use the buttons and inputs to focus.</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
+      <Offcanvas placement={'bottom'} show={show} onHide={handleClose}
+        style={{ background: "rgb(254, 254, 180)" }}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Focus the Telescope</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          Use the Buttons and inputs below to run a focus loop.
+          <p />
           <Button variant="primary" onClick={handleClose}>
             Focus now
           </Button>
-        </Modal.Footer>
-      </Modal>
+        </Offcanvas.Body>
+      </Offcanvas>
+
       <Navbar className="color-nav" fixed="top" expand="lg">
         <Navbar.Brand href="#home">
           <img
@@ -113,10 +114,12 @@ function MainPage() {
           </div>
         </Col>
       </Row>
-      {/* </Container> */}
+
     </Container >
-  );
+  )
 }
+
+
 
 
 export default MainPage;
