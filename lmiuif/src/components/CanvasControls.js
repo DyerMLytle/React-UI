@@ -1,6 +1,11 @@
 import React from 'react';
 import Canvas from "./Canvas";
-import im1 from "./assets/images/dumbbell-bw.jpg";
+import {
+  Button
+} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import im1 from "../assets/images/dumbbell-bw.jpg";
 
 function CanvasControls() {
 
@@ -27,8 +32,17 @@ function CanvasControls() {
   }
 
   return (
-    <div>
-      <Canvas forwardedRef={childRef} />
+    <div id="canvcont">
+      <div id="cdiv">
+        <Canvas forwardedRef={childRef} />
+      </div>
+      <div id="navi">
+        <Button variant="outline-danger" size="lg"
+          style={{ width: "50px", height: "50px" }}>+</Button>
+        <br></br>
+        <Button variant="outline-danger" size="lg"
+          style={{ width: "50px", height: "50px" }}>-</Button>
+      </div>
     </div>
   );
 

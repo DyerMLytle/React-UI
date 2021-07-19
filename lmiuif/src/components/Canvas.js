@@ -1,9 +1,11 @@
 import React from 'react';
 
-function Canvas({forwardedRef}) {
+
+
+function Canvas({ forwardedRef }) {
 
   return (
-    <div>
+    <div >
       <canvas
         width={1000}
         height={800}
@@ -11,8 +13,7 @@ function Canvas({forwardedRef}) {
         ref={forwardedRef} >
       </canvas>
     </div>
-  );
-
+  )
 }
 
 export default Canvas;
