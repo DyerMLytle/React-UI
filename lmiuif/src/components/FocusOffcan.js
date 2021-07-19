@@ -13,11 +13,8 @@ function FocusOffcan() {
 
   return (
 
-    <div style={{
-      paddingTop: "10px", paddingBottom: "10px",
-      paddingLeft: "10px", paddingRight: "10px"
-    }}>
-      <Offcanvas placement={'bottom'} show={show} onHide={handleClose}
+    <div>
+      <Offcanvas placement={'end'} show={show} onHide={handleClose}
         style={{ background: "rgb(254, 254, 180)" }}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Focus the Telescope</Offcanvas.Title>

@@ -14,14 +14,16 @@ import {
   PopoverBody,
   PopoverHeader
 } from 'react-bootstrap';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function MainPage() {
-  // const [setShow] = React.useState(false);
+  // const [show, setShow] = React.useState(false);
 
   // const handleClose = () => setShow(false);
   // const handleShow = () => setShow(true);
+
 
   const popover = (
     < Popover id="popover-basic" >
@@ -43,6 +45,7 @@ function MainPage() {
       <ICNavbar />
 
 
+
       {/* Add a little space at the top, below the Navbar, above the Grid. */}
       <Row style={{ marginLeft: 0, marginRight: 0 }} ><p /></Row>
       {/* This is the Bootstrap Grid layout. */}
@@ -53,6 +56,7 @@ function MainPage() {
         <Col lg={4} style={{ paddingLeft: 0, paddingRight: 0 }}>
           <div style={{ width: "100%", height: "100%" }}>
             <FocusOffcan />
+
             <OverlayTrigger trigger="click" placement="left" overlay={popover}>
               <div style={{
                 paddingTop: "10px", paddingBottom: "10px",
