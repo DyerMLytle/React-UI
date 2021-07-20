@@ -50,3 +50,8 @@ canvas {
 .top-buffer {
   margin-top: 20px;
 }
+
+.btn-small {
+  padding: 0.2rem 0.2rem;
+  font-size: 12px;
+}
