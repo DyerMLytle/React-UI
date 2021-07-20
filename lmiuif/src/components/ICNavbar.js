@@ -34,7 +34,7 @@ function ICNavbar() {
             <NavDropdown.Item href="#action/3.4">JOEControl</NavDropdown.Item>
           </NavDropdown>
         </Nav>
-        <Navbar.Text>LDT I-Control</Navbar.Text>
+        <Navbar.Text>Instrument Control Interface</Navbar.Text>
       </Navbar.Collapse>
     </Navbar>
   )

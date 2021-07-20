@@ -15,10 +15,10 @@ function FilterOffcan() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const [checked, setChecked] = React.useState(false);
+  //const [checked, setChecked] = React.useState(false);
   const [radioValue, setRadioValue] = React.useState('1');
 
-  const [checked2, setChecked2] = React.useState(false);
+  //const [checked2, setChecked2] = React.useState(false);
   const [radioValue2, setRadioValue2] = React.useState('1');
 
 
@@ -68,7 +68,7 @@ function FilterOffcan() {
                 type="radio"
                 variant={idx % 2 ? 'outline-primary' : 'outline-primary'}
                 size={'xsm'}
-                name="radio"
+                name="FW1"
                 value={radio.value}
                 checked={radioValue === radio.value}
                 onChange={(e) => setRadioValue(e.currentTarget.value)}
@@ -87,7 +87,7 @@ function FilterOffcan() {
                 type="radio"
                 variant={idx % 2 ? 'outline-primary' : 'outline-primary'}
                 size={'xsm'}
-                name="radio"
+                name="FW2"
                 value={radio2.value}
                 checked={radioValue2 === radio2.value}
                 onChange={(e) => setRadioValue2(e.currentTarget.value)}
