@@ -10,19 +10,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
 function FilterOffcan(props) {
-  // const [show, setShow] = React.useState(false);
 
-  // const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
-
-  //const [checked, setChecked] = React.useState(false);
   const [radioValue, setRadioValue] = React.useState('1');
-
-  //const [checked2, setChecked2] = React.useState(false);
   const [radioValue2, setRadioValue2] = React.useState('1');
 
   const { showFilter, toggleShowFilter } = props
-
 
   const radios1 = [
     { name: 'OPEN', value: '1' },
@@ -38,77 +30,73 @@ function FilterOffcan(props) {
   ];
 
   const radios2 = [
-    { name: 'OPEN', value: '11' },
-    { name: 'DARK', value: '12' },
-    { name: 'OH', value: '13' },
-    { name: 'UC', value: '14' },
-    { name: 'BC', value: '15' },
-    { name: 'I', value: '16' },
-    { name: 'R', value: '17' },
-    { name: 'V', value: '18' },
-    { name: 'B', value: '19' },
-    { name: 'U', value: '20' },
+    { name: 'OPEN', value: '1' },
+    { name: 'DARK', value: '2' },
+    { name: 'OH', value: '3' },
+    { name: 'UC', value: '4' },
+    { name: 'BC', value: '5' },
+    { name: 'I', value: '6' },
+    { name: 'R', value: '7' },
+    { name: 'V', value: '8' },
+    { name: 'B', value: '9' },
+    { name: 'U', value: '10' },
   ];
 
   return (
-
-    // <div>
-      <Offcanvas placement={'end'} show={showFilter} onHide={toggleShowFilter}
-        style={{ background: "rgb(254, 254, 180)" }}>
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Set Filter Wheels</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          Use the Buttons and inputs below to set up the filter wheels.
-          <p />
-          <Form.Label htmlFor="basic-url">Lower Filter Wheel (FW1)</Form.Label>
-          <ButtonGroup>
-            {radios1.map((radio, idx) => (
-              <ToggleButton
-                key={idx}
-                id={`radio-${idx}`}
-                type="radio"
-                variant={idx % 2 ? 'outline-primary' : 'outline-primary'}
-                size={'xsm'}
-                name="FW1"
-                value={radio.value}
-                checked={radioValue === radio.value}
-                onChange={(e) => setRadioValue(e.currentTarget.value)}
-              >
-                {radio.name}
-              </ToggleButton>
-            ))}
-          </ButtonGroup>
-          <p />
-          <Form.Label htmlFor="basic-url">Upper Filter Wheel (FW2)</Form.Label>
-          <ButtonGroup>
-            {radios2.map((radio2, idx) => (
-              <ToggleButton
-                key={idx}
-                id={`radio2-${idx}`}
-                type="radio"
-                variant={idx % 2 ? 'outline-primary' : 'outline-primary'}
-                size={'xsm'}
-                name="FW2"
-                value={radio2.value}
-                checked={radioValue2 === radio2.value}
-                onChange={(e) => setRadioValue2(e.currentTarget.value)}
-              >
-                {radio2.name}
-              </ToggleButton>
-            ))}
-          </ButtonGroup>
-          <p />
-          <Button variant="primary" onClick={toggleShowFilter}>
-            Set filters now
-          </Button>
-        </Offcanvas.Body>
-      </Offcanvas>
-
-      /* <Button variant="primary" size="sm" onClick={handleShow} >
-        Filters
-      </Button> */
-    // </div >
+    <Offcanvas
+      placement={'end'}
+      show={showFilter}
+      onHide={toggleShowFilter}
+      style={{ background: "rgb(254, 254, 180)" }}>
+      <Offcanvas.Header closeButton>
+        <Offcanvas.Title>Set Filter Wheels</Offcanvas.Title>
+      </Offcanvas.Header>
+      <Offcanvas.Body>
+        Use the Buttons and inputs below to set up the filter wheels.
+        <p />
+        <Form.Label htmlFor="basic-url">Lower Filter Wheel (FW1)</Form.Label>
+        <ButtonGroup>
+          {radios1.map((radio, idx) => (
+            <ToggleButton
+              key={idx}
+              id={`radio-${idx}`}
+              type="radio"
+              variant={idx % 2 ? 'outline-primary' : 'outline-primary'}
+              size={'xsm'}
+              name="FW1"
+              value={radio.value}
+              checked={radioValue === radio.value}
+              onChange={(e) => setRadioValue(e.currentTarget.value)}
+            >
+              {radio.name}
+            </ToggleButton>
+          ))}
+        </ButtonGroup>
+        <p />
+        <Form.Label htmlFor="basic-url">Upper Filter Wheel (FW2)</Form.Label>
+        <ButtonGroup>
+          {radios2.map((radio2, idx) => (
+            <ToggleButton
+              key={idx}
+              id={`radio2-${idx}`}
+              type="radio"
+              variant={idx % 2 ? 'outline-primary' : 'outline-primary'}
+              size={'xsm'}
+              name="FW2"
+              value={radio2.value}
+              checked={radioValue2 === radio2.value}
+              onChange={(e) => setRadioValue2(e.currentTarget.value)}
+            >
+              {radio2.name}
+            </ToggleButton>
+          ))}
+        </ButtonGroup>
+        <p />
+        <Button variant="primary" onClick={toggleShowFilter}>
+          Set filters now
+        </Button>
+      </Offcanvas.Body>
+    </Offcanvas>
   )
 }
 
