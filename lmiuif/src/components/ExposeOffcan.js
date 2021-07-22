@@ -7,16 +7,18 @@ import {
 } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function ExposeOffcan() {
-  const [show, setShow] = React.useState(false);
+function ExposeOffcan(props) {
+  // const [show, setShow] = React.useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  // const handleClose = () => setShow(false);
+  // const handleShow = () => setShow(true);
+
+  const { showExpose, toggleShowExpose } = props
 
   return (
 
-    <div>
-      <Offcanvas placement={'end'} show={show} onHide={handleClose}
+    // <div>
+      <Offcanvas placement={'end'} show={showExpose} onHide={toggleShowExpose}
         style={{ background: "rgb(254, 254, 180)" }}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Take Exposures</Offcanvas.Title>
@@ -36,16 +38,16 @@ function ExposeOffcan() {
               <InputGroup.Text id="inputGroup-sizing-sm"># of Exposures</InputGroup.Text>
               <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
             </InputGroup>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={toggleShowExpose}>
             Expose now
           </Button>
         </Offcanvas.Body>
       </Offcanvas>
 
-      <Button variant="primary" size="sm" onClick={handleShow} >
+      /* <Button variant="primary" size="sm" onClick={handleShow} >
         Exposure
-      </Button>
-    </div >
+      </Button> */
+    // </div >
   )
 }
 

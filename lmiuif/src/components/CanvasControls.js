@@ -32,7 +32,7 @@ function CanvasControls() {
   }
 
   return (
-    <div id="canvcont">
+    <div >
       <div id="cdiv">
         <Canvas forwardedRef={childRef} />
       </div>

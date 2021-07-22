@@ -5,16 +5,18 @@ import {
 } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function FocusOffcan() {
-  const [show, setShow] = React.useState(false);
+function FocusOffcan(props) {
+  //const [setShowFocus] = React.useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  // const handleCloseFocus = () => setShowFocus(false);
+  // const handleShowFocus = () => setShowFocus(true);
+
+  const { showFocus, toggleShowFocus } = props
 
   return (
 
-    <div>
-      <Offcanvas placement={'end'} show={show} onHide={handleClose}
+    // <div>
+      <Offcanvas placement={'end'} show={showFocus} onHide={toggleShowFocus}
         style={{ background: "rgb(254, 254, 180)" }}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Focus the Telescope</Offcanvas.Title>
@@ -22,16 +24,16 @@ function FocusOffcan() {
         <Offcanvas.Body>
           Use the Buttons and inputs below to run a focus loop.
           <p />
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={toggleShowFocus}>
             Focus now
           </Button>
         </Offcanvas.Body>
       </Offcanvas>
 
-      <Button variant="primary" size="sm" onClick={handleShow} >
+      /* <Button variant="primary" size="sm" onClick={handleShow} >
         Focus
-      </Button>
-    </div >
+      </Button> */
+    // </div >
   )
 }
 

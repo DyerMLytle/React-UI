@@ -9,17 +9,19 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
-function FilterOffcan() {
-  const [show, setShow] = React.useState(false);
+function FilterOffcan(props) {
+  // const [show, setShow] = React.useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  // const handleClose = () => setShow(false);
+  // const handleShow = () => setShow(true);
 
   //const [checked, setChecked] = React.useState(false);
   const [radioValue, setRadioValue] = React.useState('1');
 
   //const [checked2, setChecked2] = React.useState(false);
   const [radioValue2, setRadioValue2] = React.useState('1');
+
+  const { showFilter, toggleShowFilter } = props
 
 
   const radios1 = [
@@ -50,8 +52,8 @@ function FilterOffcan() {
 
   return (
 
-    <div>
-      <Offcanvas placement={'end'} show={show} onHide={handleClose}
+    // <div>
+      <Offcanvas placement={'end'} show={showFilter} onHide={toggleShowFilter}
         style={{ background: "rgb(254, 254, 180)" }}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Set Filter Wheels</Offcanvas.Title>
@@ -97,16 +99,16 @@ function FilterOffcan() {
             ))}
           </ButtonGroup>
           <p />
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={toggleShowFilter}>
             Set filters now
           </Button>
         </Offcanvas.Body>
       </Offcanvas>
 
-      <Button variant="primary" size="sm" onClick={handleShow} >
+      /* <Button variant="primary" size="sm" onClick={handleShow} >
         Filters
-      </Button>
-    </div >
+      </Button> */
+    // </div >
   )
 }
 
