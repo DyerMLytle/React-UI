@@ -12,6 +12,7 @@ import {
   ButtonGroup,
   Col
 } from 'react-bootstrap';
+import './styles.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -35,11 +36,25 @@ function MainPage() {
 
       {/* Add a little space at the top, below the Navbar, above the Grid. */}
       <Row style={{ marginLeft: 0, marginRight: 0 }} ><p /></Row>
-      
+
       {/* This is the Bootstrap Grid layout. */}
       <Row style={{ marginLeft: 0, marginRight: 0 }} >
         <Col style={{ paddingLeft: 10, paddingRight: 10 }}>
+          <div >
           <CanvasControls />
+          </div>
+          <div className="statdiv">
+          <ButtonGroup aria-label="Basic example">
+            <Button variant="success">GDR</Button>
+            <Button variant="success">Joe</Button>
+            <Button variant="success">TCS</Button>
+            <Button variant="success">AOS</Button>
+            <Button variant="danger">DOME</Button>
+            <Button variant="success">MI</Button>
+            <Button variant="success">Filters</Button>
+            <Button variant="success">Focus</Button>
+          </ButtonGroup>
+          </div>
         </Col>
         <Col xs="auto" style={{ minWidth: 100, paddingLeft: 10, paddingRight: 0 }}>
           <div style={{ width: "100%", height: "100%" }}>
@@ -58,6 +73,7 @@ function MainPage() {
           </div>
         </Col>
       </Row>
+
     </Container >
   )
 }

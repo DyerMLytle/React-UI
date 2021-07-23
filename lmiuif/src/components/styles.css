@@ -7,3 +7,8 @@
   background-color: rgb(254, 254, 180);
   color: #000;
 }
+
+.statdiv {
+  position: fixed;
+  bottom: 0px;
+}
