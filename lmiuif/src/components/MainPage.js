@@ -46,7 +46,7 @@ function MainPage() {
           <div className="statdiv">
           <ButtonGroup aria-label="Basic example">
             <Button variant="success">GDR</Button>
-            <Button variant="success">Joe</Button>
+            <Button variant="danger">Joe</Button>
             <Button variant="success">TCS</Button>
             <Button variant="success">AOS</Button>
             <Button variant="danger">DOME</Button>
