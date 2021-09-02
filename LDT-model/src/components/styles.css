@@ -1,0 +1,14 @@
+.btn-xsm {
+  padding: 0.2rem 0.2rem;
+  font-size: 14px;
+}
+
+.yellow_modal .modal-content{
+  background-color: rgb(254, 254, 180);
+  color: #000;
+}
+
+.statdiv {
+  position: fixed;
+  bottom: 0px;
+}
