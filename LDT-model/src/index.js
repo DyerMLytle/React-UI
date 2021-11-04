@@ -5,7 +5,9 @@ import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <Suspense fallback={<div>Loading... </div>}> */}
+      <App />
+    {/* </Suspense>, */}
   </React.StrictMode>,
   document.getElementById('root')
 );
